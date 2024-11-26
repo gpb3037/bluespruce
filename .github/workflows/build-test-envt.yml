@@ -1,0 +1,32 @@
+name: Test EA Python Envt Mac, Linux, Windows
+
+on: workflow_dispatch
+
+jobs:
+  runtests:
+    name: conda (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: 
+          - "ubuntu-latest"
+          - "macos-13"
+          - "macos-latest"
+          - "windows-latest"
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4.1.7
+        with:
+            ref: ${{ github.head_ref || github.ref_name }}
+      - uses: conda-incubator/setup-miniconda@v3.0.4
+        with:
+          auto-activate-base: false
+          environment-file: environment.yml
+          activate-environment: earth-analytics-python
+      - run: conda list
+      - run: python -c "import earthpy"
+      - run: python -c "import geopandas"
+      - run: python -c "import rioxarray"
