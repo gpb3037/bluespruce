@@ -1,0 +1,40 @@
+#### compare DEM for Boulder County
+#### https://digital-geography.com/dem-comparison-srtm-3-vs-aster-gdem-v2/
+##### The improved ASTER GDEM V2 adds 260,000 additional stereo-pairs, improving coverage and reducing the occurrence of artifacts. The refined production algorithm provides improved spatial resolution, increased horizontal and vertical accuracy, and superior water body coverage and detection. The ASTER GDEM V2 maintains the GeoTIFF format and the same gridding and tile structure as V1, with 30-meter postings and 1 x 1 degree tiles.
+##### 30m at ground solution
+##### passive system
+##### from 83° north latitude to 83° south
+##### released 2011
+##### free download with an ECHO/REVERB account via FTP pull
+##### still active
+
+##### SRTM or the Shuttle Radar Topography Mission was started 1999 onboard the Endeavour and collected data for 11 days. As the orbit of the shuttle was not circumpolar but sinusoidal it was only possible to  cover a small portion of the earth surface. The shuttle therefore used the reflection of emitted radar signals in the so-called C-band (wavelength 5.6 cm) for the SIR-C sensor developed by the Jet Propulsion Laboratory and the X-band (wavelength 3.1 cm) for the X-SAR sensor developed by the German Aerospace Agency. The mission was clear: map the world!
+
+
+##### 90m at ground worldwide
+##### active system
+##### from 60° north latitude to 58° south
+##### acquired 2000 /different releases
+##### free download without registering
+##### once acquired, source data hasn’t changed
+
+##### article indicates some of the ASTER is noisy
+
+### https://appeears.earthdatacloud.nasa.gov/products
+
+
+import rasterio
+import rioxarray as rxr
+import numpy as np
+import matplotlib.pyplot as plt
+import geopandas as gpd
+from rasterio.plot import show
+from shapely.geometry import mapping
+
+dem_uri = "./dem/ASTGTM_NUMNC.003_ASTER_GDEM_NUM_doy2000061_aid0001.tif"
+
+dem_da = rxr.open_rasterio(dem_uri, mask_and_scale=True).squeeze()
+
+dem_da
+
+dem_da.plot()

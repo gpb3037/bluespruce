@@ -1,0 +1,2 @@
+File Name,Dataset,aid,Date,Count,Minimum,Maximum,Range,Mean,Standard Deviation,Variance,Upper Quartile,Upper 1.5 IQR,Median,Lower 1.5 IQR,Lower Quartile
+ASTGTM_NC_003_ASTER_GDEM_DEM_doy2000061_aid0001,ASTER_GDEM_DEM,aid0001,2000-03-01,2629390.0,1486.0,4322.0,"(1486.0,4322.0)",2255.2697884,648.7624492,420892.7154529,2670.0,4240.0,2180.0,1486.0,1623.0

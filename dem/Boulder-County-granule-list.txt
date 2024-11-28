@@ -1,0 +1,4 @@
+https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/ASTGTM_NC.003/ASTGTMV003_N39W106_dem.nc
+https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/ASTGTM_NC.003/ASTGTMV003_N40W106_dem.nc
+https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/ASTGTM_NUMNC.003/ASTGTMV003_N39W106_num.nc
+https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/ASTGTM_NUMNC.003/ASTGTMV003_N40W106_num.nc
