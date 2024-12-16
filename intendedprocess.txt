@@ -1,0 +1,12 @@
+I have had difficulty today trying to make a systematic step through 3 study areas (counties) running into errors in trying to sync too much data as well as not executing stepping through the areas correctly.  This is started in the repository TreeHabitat and I can't seem to revert or stash changes even though I have deleted the files that are too large - there appears to be a way the system has stored the large dataset and keeps trying to upload it.
+
+The steps I wanted to do were 
+
+Subset out 3 study counties (Albany in Wy, Boulder in Co, and Taos in NM)
+Download the linear water features and buffer to 100 meters
+Obtain Soil Data for the entire area
+Obtain DEM Data for the entire area
+Derive Aspect and rank north as a value of 1 and east or west as a value of 0.5
+Harmonize the 
+
+Obtain Climate data to include 2025 and 2050
